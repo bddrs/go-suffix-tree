@@ -560,3 +560,16 @@ failed:
 	dumpTestData(wordRef, tree, ops, errMsg)
 	t.FailNow()
 }
+
+func TestHasSequence(t *testing.T) {
+	/*
+		"edible", "presentable", "abominable", "credible",
+		"picturesque", "statuesque", "nothing", "something", "thing", "nonsense",
+		"random word", "word", "table", "unbelievable", "believable", "sense",
+	*/
+	_, tree := getFixtures()
+
+	if !tree.HasSequence([]byte("bl")) {
+		t.Fatal("Failed to find existing subsequence")
+	}
+}
