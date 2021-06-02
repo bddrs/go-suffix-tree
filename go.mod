@@ -1,4 +1,4 @@
-module github.com/bddrs/go-suffix-tree
+module github.com/spacewander/go-suffix-tree
 
 go 1.15
 
